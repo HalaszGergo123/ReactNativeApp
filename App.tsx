@@ -11,6 +11,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import MotorsportInformation from './components/MotorsportInformation';
 import { StatusBar } from 'expo-status-bar';
 import { checkIfIsConnectedToNetwork } from './components/helpers/NetworkStateAlert';
+import RaceInformation from './components/RaceInformation';
 
 checkIfIsConnectedToNetwork();
 LogBox.ignoreLogs(['Setting a timer']);
@@ -37,6 +38,7 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} options={{ title: "Motorsport Calendar" }} />
         <Stack.Screen name="MotorsportInformation" component={MotorsportInformation} />
+        <Stack.Screen name="RaceInformation" component={RaceInformation} options={{ title: "Race" }} />
       </Stack.Navigator>
       <StatusBar></StatusBar>
     </NavigationContainer>

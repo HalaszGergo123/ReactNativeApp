@@ -1,18 +1,11 @@
 import React from 'react'
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
-import firebase from 'firebase/app'
 import f1Logo from '../assets/f1Logo.png'
+import { checkIfIsConnectedToNetwork } from './helpers/NetworkStateAlert'
+
+checkIfIsConnectedToNetwork();
 
 const Home = ({ navigation }: any) => {
-    require('@firebase/database');
-    // const grandPrixDate = async () => {
-    //     const data  = await firebase.database().ref('F1/0/secondPracticeDate').get();
-    //     console.log(new Date(data.val()).toString())
-    // }
-    // grandPrixDate();
-
-
-
     return (
         <TouchableOpacity onPress={() => navigation.navigate('MotorsportInformation')}>
             <View style={styles.container} >
