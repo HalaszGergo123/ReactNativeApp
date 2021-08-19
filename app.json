@@ -18,7 +18,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.inhotep.MotorsportCalendar"
+      "bundleIdentifier": "com.Fissher.MotorsportCalendar"
     },
     "android": {
       "adaptiveIcon": {
