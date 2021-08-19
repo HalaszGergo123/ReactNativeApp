@@ -1,12 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Alert } from 'react-native';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import f1Logo from '../assets/f1Logo.png'
 import { checkIfIsConnectedToNetwork } from './helpers/NetworkStateAlert'
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 checkIfIsConnectedToNetwork();
+AsyncStorage.getItem("questionAsked").then(value => {
+    if (value !== "yes") {
+        Alert.alert("", "The dates are converted to your local timezone, enjoy the app!")
+    }
+})
 
-Alert.alert("", "The dates are converted to your local timezone, enjoy the app!")
+const storeData = async (value: string) => {
+    await AsyncStorage.setItem('questionAsked', value)
+}
+storeData("yes");
 
 const Home = ({ navigation }: any) => {
     return (
