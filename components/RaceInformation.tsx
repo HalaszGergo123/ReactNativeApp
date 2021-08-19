@@ -16,7 +16,7 @@ type Data = {
     raceDate: string
 }
 
-const RaceInformation = ({ route, navigation }: any) => {
+const RaceInformation = ({ route }: any) => {
     const { raceData }: { raceData: Data } = route.params;
 
     const createDateFormat = (date: string) => {

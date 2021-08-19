@@ -37,7 +37,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={Home} options={{ title: "Motorsport Calendar" }} />
-        <Stack.Screen name="MotorsportInformation" component={MotorsportInformation} />
+        <Stack.Screen name="MotorsportInformation" component={MotorsportInformation} options={{ title: "Races" }} />
         <Stack.Screen name="RaceInformation" component={RaceInformation} options={{ title: "Race" }} />
       </Stack.Navigator>
       <StatusBar></StatusBar>
