@@ -1,9 +1,12 @@
 import React from 'react'
+import { Alert } from 'react-native';
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import f1Logo from '../assets/f1Logo.png'
 import { checkIfIsConnectedToNetwork } from './helpers/NetworkStateAlert'
 
 checkIfIsConnectedToNetwork();
+
+Alert.alert("", "The dates are converted to your local timezone, enjoy the app!")
 
 const Home = ({ navigation }: any) => {
     return (
